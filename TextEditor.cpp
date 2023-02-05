@@ -6,7 +6,7 @@
 
 Rope::Rope() {}
 
-void createRopeStructure(Rope *&node, Rope *par,char a[], int l, int r)
+void Rope::createRopeStructure(Rope *&node, Rope *par,char a[], int l, int r)
 {
     Rope *t = new Rope();
     t->left = t->right = NULL;
@@ -33,7 +33,7 @@ void createRopeStructure(Rope *&node, Rope *par,char a[], int l, int r)
     }
 }
 
-void printstring(Rope *r)
+void Rope::printstring(Rope *r)
 {
     if (r==NULL)
         return;
@@ -43,7 +43,7 @@ void printstring(Rope *r)
     printstring(r->right);
 }
 
-void concatenate(Rope *&root3, Rope *root1, Rope *root2, int n1)
+void Rope::concatenate(Rope *&root3, Rope *root1, Rope *root2, int n1)
 {
 
     Rope *t = new Rope();

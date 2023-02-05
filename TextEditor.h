@@ -1,8 +1,8 @@
 //
 // Created by rezap on 2/5/2023.
 //
-#ifndef TEXTEDITOR_H
-#define TEXTEDITOR_H
+#ifndef FINAL_TEXTEDITOR_H
+#define FINAL_TEXTEDITOR_H
 
 #include <iostream>
 
@@ -21,4 +21,4 @@ public:
     void concatenate(Rope *&root3, Rope *root1, Rope *root2, int n1);
 };
 
-#endif //TEXTEDITOR_H
+#endif //FINAL_TEXTEDITOR_H
