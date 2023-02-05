@@ -28,5 +28,8 @@ int main() {
         r.print(root3);
         cout << "\n";
     }
+    if(choice == "new"){
+        r.newstr();
+    }
     return 0;
 }

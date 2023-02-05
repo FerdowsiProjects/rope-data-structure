@@ -61,4 +61,5 @@ void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
 void Rope::newstr() {
     string newstr;
     getline(cin,newstr);
+    cout<< newstr;
 }
