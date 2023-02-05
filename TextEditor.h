@@ -17,7 +17,6 @@ public:
     char *str;
     string news;
     int lc;
-#define ROPE_LEN(r) ((r)->lc)
     void makerope(Rope *&node, Rope *par,char a[], int l, int r);
     void print(Rope *r);
     void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
