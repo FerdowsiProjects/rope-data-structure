@@ -15,6 +15,7 @@ public:
     Rope();
     Rope *left, *right, *parent;
     char *str;
+    string news;
     int lc;
     void makerope(Rope *&node, Rope *par,char a[], int l, int r);
     void print(Rope *r);

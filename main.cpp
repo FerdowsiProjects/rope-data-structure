@@ -11,7 +11,7 @@ int main() {
     char b[] = "bro!";
 
     cout << "1-status" << endl << "2-new" << endl << "3-index" << endl << "4-concat" << endl << "5-insert" << endl;
-    cout << "6-split" << endl << "7-delete" << endl << "8-report" << endl << "9-undo" << endl << "10- finish" << endl;
+    cout << "6-split" << endl << "7-delete" << endl << "8-report" << endl << "9-undo" << endl << "10-finish" << endl;
 
     while(choice != "finish") {
         cout << "\n" << ">>";

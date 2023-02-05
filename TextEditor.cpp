@@ -59,11 +59,12 @@ void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
 }
 
 void Rope::newstr() {
-    string newstr;
-    getline(cin,newstr);
-    cout<< newstr;
+    string ns;
+    getline(cin,ns);
+    news=ns;
 }
 
 void Rope::status(char a[],char b[]) {
     cout << "1. " << a << "\n" << "2. " << b;
+    cout << "\n" << "3." << news;
 }
