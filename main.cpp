@@ -11,25 +11,32 @@ int main() {
     char b[] = "bro!";
 
     cout << "1-status" << endl << "2-new" << endl << "3-index" << endl << "4-concat" << endl << "5-insert" << endl;
-    cout << "6-split" << endl << "7-delete" << endl << "8-report" << endl << "9-undo" << endl << ">> ";
-    cin >> choice;
+    cout << "6-split" << endl << "7-delete" << endl << "8-report" << endl << "9-undo" << endl << "10- finish" << endl;
 
-    if(choice == "concat") {
-        Rope *root1 = NULL;
-        n1 = sizeof(a) / sizeof(a[0]);
-        r.makerope(root1, NULL, a, 0, n1 - 1);
+    while(choice != "finish") {
+        cout << "\n" << ">>";
+        cin >> choice;
 
-        Rope *root2 = NULL;
-        n2 = sizeof(b) / sizeof(b[0]);
-        r.makerope(root2, NULL, b, 0, n2 - 1);
-        Rope *root3 = NULL;
-        r.concat(root3, root1, root2, n1);
+        if (choice == "concat") {
+            Rope *root1 = NULL;
+            n1 = sizeof(a) / sizeof(a[0]);
+            r.makerope(root1, NULL, a, 0, n1 - 1);
 
-        r.print(root3);
-        cout << "\n";
-    }
-    if(choice == "new"){
-        r.newstr();
+            Rope *root2 = NULL;
+            n2 = sizeof(b) / sizeof(b[0]);
+            r.makerope(root2, NULL, b, 0, n2 - 1);
+            Rope *root3 = NULL;
+            r.concat(root3, root1, root2, n1);
+
+            r.print(root3);
+            cout << "\n";
+        }
+        if (choice == "new") {
+            r.newstr();
+        }
+        if (choice == "status") {
+            r.status(a, b);
+        }
     }
     return 0;
 }

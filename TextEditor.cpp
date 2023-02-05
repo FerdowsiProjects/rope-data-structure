@@ -63,3 +63,7 @@ void Rope::newstr() {
     getline(cin,newstr);
     cout<< newstr;
 }
+
+void Rope::status(char a[],char b[]) {
+    cout << "1. " << a << "\n" << "2. " << b;
+}

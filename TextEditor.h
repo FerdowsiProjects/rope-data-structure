@@ -20,6 +20,7 @@ public:
     void print(Rope *r);
     void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
     void newstr();
+    void status(char a[],char b[]);
 };
 
 #endif //FINAL_TEXTEDITOR_H
