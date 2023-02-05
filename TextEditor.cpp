@@ -97,3 +97,23 @@ void Rope::deleterope(Rope *root)
 
     }
 }
+
+Rope *split(const Rope *r, int start, int length) {
+    if (!r->left) {
+        Rope *s = new Rope;
+        s->left = 0;
+        s->st = r->st + start;
+        s->length = length;
+        return s;
+    } else if (start + length <= r->left->length) {
+        return split(r->left, start, length);
+    } else if (r->left->length <= start) {
+        return split(r->right, start - r->left->length, length - r->left->length);
+    } else {
+        Rope *s = new Rope;
+        s->left = split(r->left, start, r->left->length - start);
+        s->right = split(r->right, 0, length - (r->left->length - start));
+        s->length = length;
+        return s;
+    }
+}
