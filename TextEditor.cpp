@@ -6,21 +6,21 @@
 
 Rope::Rope() {}
 
-void Rope::makerope(Rope *&node, Rope *par,char a[], int l, int r){
-    int m,i,j;
+void Rope::makerope(Rope *&node, Rope *par,char a[], int l, int r) {
+    int m, i, j;
     Rope *t = new Rope();
 
     t->left = t->right = NULL;
     t->parent = par;
 
-    if ((r-l) > ll){
+    if ((r - l) > ll) {
         t->str = NULL;
-        t->lc = (r-l)/2;
+        t->lc = (r - l) / 2;
         node = t;
-        m = (l + r)/2;
+        m = (l + r) / 2;
 
         makerope(node->left, node, a, l, m);
-        makerope(node->right, node, a, m+1, r);
+        makerope(node->right, node, a, m + 1, r);
     }
     else
     {
@@ -33,17 +33,16 @@ void Rope::makerope(Rope *&node, Rope *par,char a[], int l, int r){
             t->str[j++] = a[i];
         }
     }
-    void prstr(Rope *r){
+}
+void prstr(Rope *r){
 
-        if (r==NULL) {
-            return;
-        }
+    if (r==NULL) {
+        return;
+    }
 
-        if (r->left==NULL && r->right==NULL) {
-            cout << r->str;
-        }
-
+    if (r->left==NULL && r->right==NULL) {
+        cout << r->str;
+    }
         prstr(r->left);
         prstr(r->right);
-    }
 }
