@@ -18,6 +18,8 @@ int main() {
         cin >> choice;
 
         if (choice == "concat") {
+            int i,j;
+            cin >> i >> j;
             Rope *root1 = NULL;
             n1 = sizeof(a) / sizeof(a[0]);
             r.makerope(root1, NULL, a, 0, n1 - 1);
@@ -26,9 +28,15 @@ int main() {
             n2 = sizeof(b) / sizeof(b[0]);
             r.makerope(root2, NULL, b, 0, n2 - 1);
             Rope *root3 = NULL;
-            r.concat(root3, root1, root2, n1);
+            r.concat(root1, root2);
+            cin >> choice;
+            if (choice == "status") {
+                cout << temp;
+            }
 
-            r.print(root3);
+            //r.concat(root3, root1, root2, n1);
+
+           // r.print(t);
             cout << "\n";
         }
         if (choice == "new") {
