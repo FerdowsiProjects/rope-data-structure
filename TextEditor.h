@@ -24,6 +24,7 @@ public:
     void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
     void newstr();
     void status(char a[],char b[]);
+    char index(Rope* rt, int idx);
     void insert(Rope *tree, char value);
 };
 

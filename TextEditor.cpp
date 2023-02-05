@@ -79,6 +79,21 @@ void Rope::insert(Rope *tree, char value) {
     tree->size++;
 }
 
+char Rope::index(Rope* rt, int idx) {
+    char *character = calloc(1, sizeof(char));
+    DIE(character == NULL, "Calloc failed!");
+
+    // recursive search
+    findChar(rt->root, idx, character);
+
+    // dealocate memory for the idx-th character
+    char auxiliary_character = character[0];
+    free(character);
+
+    // return character at position idx
+    return auxiliary_character;
+}
+
 
 Rope *split(const Rope *r, int start, int length) {
     if (!r->left) {

@@ -24,7 +24,7 @@ int main() {
             r.newstr();
         }
         if (choice == "delete"){
-           // r.deleterope(a);
+            // r.deleterope(a);
         }
         if (choice == "concat") {
             Rope *root1 = NULL;
