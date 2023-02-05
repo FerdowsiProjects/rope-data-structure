@@ -69,34 +69,16 @@ void Rope::status(char a[],char b[]) {
     cout << "\n" << "3." << news;
 }
 
-void Rope::deleterope(Rope *root)
-{
-    Rope *prev, *node = root;
-
-    while(node != NULL) {
-
-        if ((node->right == NULL) && (node->left == NULL)) {
-            prev = node->parent;
-            if (node->str != NULL)
-                free(node->str);
-            free(node);
-            node = prev;
-            continue;
-        }
-
-        if (node->right == NULL) {
-            prev = node;
-            node = node->left;
-            prev->left = NULL;
-
-        } else {
-            prev = node;
-            node = node->right;
-            prev->right = NULL;
-        }
-
-    }
+void Rope::insert(Rope *tree, char value) {
+    Node *node = makerope(value);
+    if (tree->root)
+        tree->root->parent = node;
+    node->left = tree->root;
+    node->size = (node->left ? node->left->size : 0) + 1;
+    tree->root = node;
+    tree->size++;
 }
+
 
 Rope *split(const Rope *r, int start, int length) {
     if (!r->left) {

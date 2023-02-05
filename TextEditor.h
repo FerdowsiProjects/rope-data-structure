@@ -24,7 +24,7 @@ public:
     void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
     void newstr();
     void status(char a[],char b[]);
-    void deleterope(Rope *root);
+    void insert(Rope *tree, char value);
 };
 
 #endif //FINAL_TEXTEDITOR_H
