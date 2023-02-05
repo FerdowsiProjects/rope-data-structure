@@ -43,21 +43,7 @@ void Rope::print(Rope *r)
     print(r->right);
 }
 
-Rope Rope::concat(Rope *root1, Rope *root2)
-{
-    Rope* temp =(Rope*) malloc(sizeof(Rope));
-    //int* ptr = (int*) malloc(sizeof(int));
-    temp->parent = temp->right = NULL;
-    temp->str = NULL;
-    temp->lc = ROPE_LEN(root1) + ROPE_LEN(root2);
-    temp->left = root1;
-    root1->parent = temp;
-    root1->right = root2;
-    root2->parent = root1;
-    //return temp;
-}
-
-/*void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
+void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
 {
 
     Rope *t = new Rope();
@@ -70,7 +56,7 @@ Rope Rope::concat(Rope *root1, Rope *root2)
     t->str = NULL;
     root3 = t;
 
-}*/
+}
 
 void Rope::newstr() {
     string ns;
