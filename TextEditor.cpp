@@ -68,3 +68,32 @@ void Rope::status(char a[],char b[]) {
     cout << "1. " << a << "\n" << "2. " << b;
     cout << "\n" << "3." << news;
 }
+
+void Rope::deleterope(Rope *root)
+{
+    Rope *prev, *node = root;
+
+    while(node != NULL) {
+
+        if ((node->right == NULL) && (node->left == NULL)) {
+            prev = node->parent;
+            if (node->str != NULL)
+                free(node->str);
+            free(node);
+            node = prev;
+            continue;
+        }
+
+        if (node->right == NULL) {
+            prev = node;
+            node = node->left;
+            prev->left = NULL;
+
+        } else {
+            prev = node;
+            node = node->right;
+            prev->right = NULL;
+        }
+
+    }
+}

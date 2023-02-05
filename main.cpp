@@ -23,6 +23,9 @@ int main() {
         if (choice == "new") {
             r.newstr();
         }
+        if (choice == "delete"){
+           // r.deleterope(a);
+        }
         if (choice == "concat") {
             Rope *root1 = NULL;
             n1 = sizeof(a) / sizeof(a[0]);
