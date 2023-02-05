@@ -16,9 +16,9 @@ public:
     Rope *left, *right, *parent;
     char *str;
     int lc;
-    void createRopeStructure(Rope *&node, Rope *par,char a[], int l, int r);
-    void printstring(Rope *r);
-    void concatenate(Rope *&root3, Rope *root1, Rope *root2, int n1);
+    void makerope(Rope *&node, Rope *par,char a[], int l, int r);
+    void status(Rope *r);
+    void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
 };
 
 #endif //FINAL_TEXTEDITOR_H
