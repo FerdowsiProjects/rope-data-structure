@@ -33,14 +33,14 @@ void Rope::makerope(Rope *&node, Rope *par,char a[], int l, int r)
     }
 }
 
-void Rope::status(Rope *r)
+void Rope::print(Rope *r)
 {
     if (r==NULL)
         return;
     if (r->left==NULL && r->right==NULL)
         cout << r->str;
-    status(r->left);
-    status(r->right);
+    print(r->left);
+    print(r->right);
 }
 
 void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
