@@ -6,7 +6,11 @@
 
 Rope::Rope() {}
 
-void Rope::makerope(Rope *&node, Rope *par,char a[], int l, int r) {
+
+
+
+
+/*void Rope::makerope(Rope *&node, Rope *par,char a[], int l, int r) {
     int m, i, j;
     Rope *t = new Rope();
 
@@ -43,6 +47,6 @@ void prstr(Rope *r){
     if (r->left==NULL && r->right==NULL) {
         cout << r->str;
     }
-        prstr(r->left);
-        prstr(r->right);
-}
+    prstr(r->left);
+    prstr(r->right);
+}*/

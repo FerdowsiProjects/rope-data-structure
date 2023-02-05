@@ -1,3 +1,4 @@
+#include "TextEditor.h"
 #include <iostream>
 #include "TextEditor.h"
 
@@ -11,13 +12,13 @@ int main() {
             "5. insert" << "\n" << "6. split" << "\n" << "7. delete" << "\n" << "8. report" <<
             "\n" << "9. undo" << "\n" << ">> ";
 
-    Rope *root1 = NULL;
+   /* Rope *root1 = NULL;
     char a[] =  "Hi This is geeksforgeeks. ";
     int n1 = sizeof(a)/sizeof(a[0]);
     ro.makerope(root1, NULL, a, 0, n1-1);
 
     ro.prstr(root1);
-    cout << endl;
+    cout << endl;*/
 
     return 0;
 }
