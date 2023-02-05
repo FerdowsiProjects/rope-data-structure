@@ -1,9 +1,12 @@
 //
 // Created by rezap on 2/5/2023.
 //
+#ifndef TEXTEDITOR_H
+#define TEXTEDITOR_H
 
-#ifndef FINAL_TEXTEDITOR_H
-#define FINAL_TEXTEDITOR_H
+#include <iostream>
+
+using namespace std;
 
 // max lenght of leaf
 const int ll = 2;
@@ -11,6 +14,7 @@ const int ll = 2;
 class Rope
 {
 public:
+    Rope();
     Rope *left, *right, *parent;
     char *str;
     int lc;
@@ -19,4 +23,4 @@ public:
 
 };
 
-#endif //FINAL_TEXTEDITOR_H
+#endif //TEXTEDITOR_H
