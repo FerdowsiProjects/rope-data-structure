@@ -57,3 +57,8 @@ void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
     root3 = t;
 
 }
+
+void Rope::newstr() {
+    string newstr;
+    getline(cin,newstr);
+}
