@@ -58,17 +58,28 @@ void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
 
 }
 
-void Rope::newstr() {
-    string ns;
-    getline(cin,ns);
-    news=ns;
+void new(char *s, size_t ll)
+{
+    size_t len = strlen(s);
+    if (len == 0)
+        return NULL;
+    Rope *root = NULL;
+    Rope_create(&root, NULL, s, 0, len, leaf_len);
+    return root;
 }
 
-void Rope::status(char a[],char b[]) {
-    cout << "1. " << a << "\n" << "2. " << b;
-    cout << "\n" << "3." << news;
+void status(Rope *r)
+{
+    if (r == NULL)
+        return;
+    if ((r->left == NULL) && (r->right == NULL))
+    {
+        for (int i = 0; i < r->lc; i++)
+            putchar(r->str[i]);
+    }
+    status(r->left);
+    status(r->right);
 }
-
 void Rope::insert(Rope *tree, char value) {
     Node *node = makerope(value);
     if (tree->root)
@@ -95,7 +106,7 @@ char Rope::index(Rope* rt, int idx) {
 }
 
 
-Rope *split(const Rope *r, int start, int length) {
+void split(const Rope *r, int start, int length) {
     if (!r->left) {
         Rope *s = new Rope;
         s->left = 0;
@@ -114,3 +125,31 @@ Rope *split(const Rope *r, int start, int length) {
         return s;
     }
 }
+void delete(Rope *root)
+    {
+        Rope *prev, *node = root;
+
+        while(node != NULL) {
+
+            if ((node->right == NULL) && (node->left == NULL)) {
+                prev = node->parent;
+                if (node->str != NULL)
+                    free(node->str);
+                free(node);
+                node = prev;
+                continue;
+            }
+
+            if (node->right == NULL) {
+                prev = node;
+                node = node->left;
+                prev->left = NULL;
+
+            } else {
+                prev = node;
+                node = node->right;
+                prev->right = NULL;
+            }
+
+        }
+    }

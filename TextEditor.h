@@ -22,10 +22,12 @@ public:
     void makerope(Rope *&node, Rope *par,char a[], int l, int r);
     void print(Rope *r);
     void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
-    void newstr();
-    void status(char a[],char b[]);
+    void new(char *s, size_t ll);
+    void status(Rope *r);
     char index(Rope* rt, int idx);
     void insert(Rope *tree, char value);
+    void delete(Rope *root);
+    void split(const Rope *r, int start, int length);
 };
 
 #endif //FINAL_TEXTEDITOR_H
