@@ -21,7 +21,7 @@ int main() {
             r.status(a, b);
         }
         if (choice == "new") {
-            r.newstr();
+            r.new();
         }
         if (choice == "delete"){
             // r.deleterope(a);

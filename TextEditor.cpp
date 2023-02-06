@@ -58,7 +58,7 @@ void Rope::concat(Rope *&root3, Rope *root1, Rope *root2, int n1)
 
 }
 
-void new(char *s, size_t ll)
+void Rope::new(char *s, int ll)
 {
     size_t len = strlen(s);
     if (len == 0)
@@ -68,7 +68,7 @@ void new(char *s, size_t ll)
     return root;
 }
 
-void status(Rope *r)
+void Rope::status(Rope *r)
 {
     if (r == NULL)
         return;
@@ -106,7 +106,7 @@ char Rope::index(Rope* rt, int idx) {
 }
 
 
-void split(const Rope *r, int start, int length) {
+void Rope::split(const Rope *r, int start, int length) {
     if (!r->left) {
         Rope *s = new Rope;
         s->left = 0;
@@ -125,7 +125,7 @@ void split(const Rope *r, int start, int length) {
         return s;
     }
 }
-void delete(Rope *root)
+void Rope::delete(Rope *root)
     {
         Rope *prev, *node = root;
 

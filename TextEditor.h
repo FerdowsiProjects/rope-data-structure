@@ -13,16 +13,16 @@ class Rope
 {
 public:
     Rope();
-    Rope *left, *right, *parent;
+    Rope *left, *right, *parent,*Node,*root,*node;
     char *str;
     string news;
     char st;
-    int length;
+    int length,size;
     int lc;
     void makerope(Rope *&node, Rope *par,char a[], int l, int r);
     void print(Rope *r);
     void concat(Rope *&root3, Rope *root1, Rope *root2, int n1);
-    void new(char *s, size_t ll);
+    void new(char *s, int ll);
     void status(Rope *r);
     char index(Rope* rt, int idx);
     void insert(Rope *tree, char value);
